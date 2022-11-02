@@ -1,7 +1,7 @@
 // div size (frame)
 const FRAME_HEIGHT = 400;
-const FRAME_WIDTH = 750;
-const MARGINS = {left: 50, right: 50, top: 50, bottom: 50};
+const FRAME_WIDTH = 700;
+const MARGINS = {left: 25, right: 25, top: 50, bottom: 50};
 
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
 const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
@@ -25,7 +25,7 @@ let city_hall;
 let library;
 
 // build left line chart
-d3.csv("data/city-hall-short.csv", // short data includes 2019-01-01 00:00:00 until 2020-01-01 00:00:00
+d3.csv("data/city-hall-2019.csv", // data includes 2019-01-01 00:00:00 until 2020-01-01 00:00:00
 	// reformats data for time
 	(d) => {return { date : d3.timeParse("%Y-%m-%d %H:%M:%S")(d.DateTime_Measured), value : d.Total_Demand_KW };}).then((data) => {
 	
@@ -102,7 +102,7 @@ d3.csv("data/city-hall-short.csv", // short data includes 2019-01-01 00:00:00 un
 
 
 // build right line chart
-d3.csv("data/library-short.csv", // short data includes 2019-01-01 00:00:00 until 2020-01-01 00:00:00
+d3.csv("data/library-2019.csv", // data includes 2019-01-01 00:00:00 until 2020-01-01 00:00:00
 	// reformats data for time
 	(d) => {return { date : d3.timeParse("%Y-%m-%d %H:%M:%S")(d.datetime_utc_measured), value : d.total_demand_kw};}).then((data) => {
 	
