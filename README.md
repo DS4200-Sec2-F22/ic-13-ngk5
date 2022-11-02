@@ -1,7 +1,7 @@
 # ic-13
 More practice with D3
 
-Link to GitHub Pages: `[insert your clickable hyperlink here]`
+Link to GitHub Pages: https://ds4200-sec2-f22.github.io/ic-13-ngk5/
 
 ## Purpose
 
